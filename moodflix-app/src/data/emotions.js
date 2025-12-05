@@ -23,3 +23,4 @@ export const emotions = [
     description: "Inspirational stories await!",
     icon: Trophy },
 ];
+
