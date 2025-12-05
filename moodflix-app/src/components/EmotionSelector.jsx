@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { emotions } from "../data/emotions";
 import { Home, Menu, X } from "lucide-react";
+import { movies } from "../data/movies";
+import MovieList from "./MovieList";
+
 
 export default function EmotionSelector({ onSelect }) {
   const [selected, setSelected] = useState(null);
@@ -264,6 +267,7 @@ export default function EmotionSelector({ onSelect }) {
                   {emotionMessages[selected]}
                 </p>
               )}
+              
         <br />
         <br />
         
@@ -293,6 +297,11 @@ export default function EmotionSelector({ onSelect }) {
                   }}
                 />
               </div>
+              {/* MOVIE LIST SECTION */}
+               <MovieList
+                movies={movies.filter((m) => m.moods.includes(selected))}
+                 />
+
 
       </div>
     </div>
